@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Extendo",
+    "version": "1",
+    "description": "a learning experiment",
+    "browser_action": {
+        "default_icon": "tab-icon.png",
+        "default_title": "extendo!",
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "permissions": ["activeTab", "<all_urls>"]
+}

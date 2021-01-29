@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>TEST</title>
+        <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.37.2/maps/maps.css'/>
+        <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.37.2/maps/maps-web.min.js'></script>
         <style>
             body {
                 background: url('shark.jpg') no-repeat center center fixed;
@@ -10,20 +12,44 @@
                 color: red;
             }
             #weather {
-                background-color: rgb(166, 230, 219);
+                background-color: rgb(191, 219, 235);
                 border-radius: 5px;
                 text-align: center;
-                width:50%;
+                /* width:50%; */
+                color: black;
+            }
+            #map {
+              height: 500px;
+              width: 500px;
+            }
+            #time {
+                text-align: center;
+                font-size: 10em;
+                letter-spacing: .14em;
+            }
+            #date {
+                margin-top: 10%;
+                text-align: center;
+                font-size: 1.5em;
+                font-weight: bolder;
+                letter-spacing: 1.5em;
+                text-transform: uppercase;
             }
         </style>
         <script src="newtab.js"></script>
     </head>
     <body>
-        <h1>Best New Tab Ever</h1>
         <div id="date"></div>
         <div id="time"></div>
-        <div id='weather-err'></div>
-        <div id='weather'>
-        </div>
+        <!-- <div id='weather-err'></div>
+        <div id='weather'></div> -->
+        <div id="map"></div>
+        <script>
+            var map = tt.map({
+                container: 'map',
+                key: 'MmbpnXLGCMLejulVsu5VFZOlWUSUivGs',
+                style: 'tomtom://vector/1/basic-main'
+            });
+        </script>
     </body>
 </html>

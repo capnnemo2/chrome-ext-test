@@ -11,5 +11,6 @@
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
-    "permissions": ["activeTab", "<all_urls>"]
+    "permissions": ["activeTab", "<all_urls>", "geolocation"],
+    "content_security_policy": "script-src 'self' https://api.tomtom.com/*; object-src 'self'"
 }

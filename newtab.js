@@ -106,36 +106,3 @@ async function getWeather() {
 getWeather();
 
 // WHERE
-
-// function getTomTom(position) {
-//   const lat = position.coords.latitude;
-//   const long = position.coords.longitude;
-//   const userRiver = $('input[name="riverName"]:checked').val();
-//   const userRiverName = riverDescrip.find(userRiverName => userRiverName.id === userRiver);
-//   const userRiverCoords = userRiverName.takeout;
-//   const getTravelTimeURL = `https://api.tomtom.com/routing/1/calculateRoute/${lat}%2C${long}%3A${userRiverCoords}/json?avoid=unpavedRoads&key=MmbpnXLGCMLejulVsu5VFZOlWUSUivGs`
-//   fetch(getTravelTimeURL)
-//   .then(response => {
-//       if(response.ok) {
-//           return response.json();
-//       }
-//       throw new Error(response.statusText);
-//   })
-//   .then(responseJson => displayTomTom(responseJson))
-//   .catch(err => {
-//       $('#js-directions-err-msg').text(`TomTom threw a temper tantrum. Please try again in a few moments.`);
-//   });
-// }
-
-// function displayTomTom(responseJson) {
-//   const travelTime = responseJson.routes[0].summary.travelTimeInSeconds;
-//   const travelHours = Math.floor(travelTime / 3600);
-//   const travelMins = Math.floor((travelTime - (travelHours * 3600)) / 60);
-//   $('#js-travel-time').html(`<span class="travel">Time to get to take-out</span><br>${travelHours} hr and ${travelMins} min`);
-//   const travelDistance = responseJson.routes[0].summary.lengthInMeters;
-//   const distanceMiles = Math.round(travelDistance / 1609);
-//   $('#js-travel-distance').html(`<span class="travel">Distance to take-out</span><br>${distanceMiles} miles`)
-//   const rawETA = responseJson.routes[0].summary.arrivalTime;
-//   const ETA = rawETA.slice(11, 16);
-//   $('#js-eta').html(`<span class="travel">Take-out ETA</span><br>${ETA}`)
-// }
